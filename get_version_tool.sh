@@ -41,9 +41,9 @@ pip list --format=freeze >> versions-$date.md
 ##### Python3 pip3 packages Version #####
 echo "# python3 packages version"
 {
-pip3 list --format=freeze
+pip3 list
 echo "# python3 packages version" >> versions-$date.md
-pip3 list --format=freeze >> versions-$date.md
+pip3 list >> versions-$date.md
 } || {
     echo "No python3"
 }
