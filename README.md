@@ -5,11 +5,11 @@ This is a script to get all packages version on Ubuntu. After you run the script
 ## Quick Run
 ### Use wget
 ```sh
-$ wget -O - https://goo.gl/7DL27U | bash
+$ wget -O - https://goo.gl/WQWzMY | bash
 ```
 ### Use curl
 ```sh
-$ curl -Lo- https://goo.gl/7DL27U | bash
+$ curl -Lo- https://goo.gl/WQWzMY | bash
 ```
 
 ### Run local
