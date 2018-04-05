@@ -53,7 +53,7 @@ echo "# nvcc version"
 {
 nvcc --version
 echo "# nvcc version" >> versions-$date.md
-nvcc --version >> versions-$date.md
+echo "cuda(nvcc)==`nvcc --version`" >> versions-$date.md
 } || {
     echo "No Cuda"
 }
@@ -63,7 +63,7 @@ echo "# jupyter notebook version"
 {
 jupyter notebook --version
 echo "# jupyter notebook version" >> versions-$date.md
-jupyter notebook --version >> versions-$date.md
+echo "jupyter notebook==`jupyter notebook --version`" >> versions-$date.md
 } || {
     echo "No jupyter notebook"
 }
