@@ -19,5 +19,18 @@ $ cd Get-Installed-Packages-Version
 $ sh get_version_tool.sh
 ```
 
+# Compare packages version on different OS environment
+After saving the files(which named by you) are under the same folder, you could use this command to help you figure out.
+- Example
+```sh
+$ grep "vim" *
+```
+```sh
+simple1604.md:vim==2:8.0.0197-4ubuntu5
+simple1404.md:vim==2:8.0.0197-4ubuntu5
+tf1604.md:vim==2:8.0.0197-4ubuntu5
+digits1604.md:vim==2:8.0.0197-4ubuntu5
+```
+
 Ref:  
 - https://www.cyberciti.biz/faq/debian-ubuntu-linux-apt-get-aptitude-show-package-version-command/
