@@ -20,33 +20,50 @@ done
 
 ##### Java Version #####
 echo "# Java Version"
-try{
+{
     java -version
     echo "# Java Version" >> versions-$date.md
     java -version >> versions-$date.md
-}
-catch || {
+} || {
+    echo "No java"
 }
 
 ##### Python2 pip packages Version #####
 echo "# python2 packages version"
-echo "# python2 packages version" >> versions-$date.md
+{
 pip list --format=freeze
+echo "# python2 packages version" >> versions-$date.md
 pip list --format=freeze >> versions-$date.md
+} || {
+    echo "No python2"
+}
 
 ##### Python3 pip3 packages Version #####
 echo "# python3 packages version"
-echo "# python3 packages version" >> versions-$date.md
+{
 pip3 list --format=freeze
+echo "# python3 packages version" >> versions-$date.md
 pip3 list --format=freeze >> versions-$date.md
+} || {
+    echo "No python3"
+}
 
 ##### Cuda Version #####
 echo "# nvcc version"
+{
+nvcc --version
 echo "# nvcc version" >> versions-$date.md
 nvcc --version >> versions-$date.md
+} || {
+    echo "No Cuda"
+}
 
 ##### Jupyter notebook Version #####
 echo "# jupyter notebook version"
-echo "# jupyter notebook version" >> versions-$date.md
+{
 jupyter notebook --version
+echo "# jupyter notebook version" >> versions-$date.md
 jupyter notebook --version >> versions-$date.md
+} || {
+    echo "No jupyter notebook"
+}
